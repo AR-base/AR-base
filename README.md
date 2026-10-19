@@ -1,38 +1,32 @@
 ## Sai Anish Pinninti
 
-Cybersecurity + AI engineer in training. ESAIP Angers, Group 04, class of 2026 cohort. I build security and AI tools that are small, useful, and honest about what they do.
-
-Bilingual French / English. Comfortable across the stack but happiest where the security boundary meets the product surface — auth flows, SSRF guards, prompt handling, header policy.
+MSc student in Cybersecurity and Data Science at ESAIP, Angers (2026–2028), with a B.Tech in Data Science. I build AI applications (retrieval-augmented generation, tool-using agents, assistants) and the security around them, and I ship them: most of the projects below are live.
 
 ---
 
-### Selected projects
+### Projects
 
 | Project | What it does | Stack |
 | --- | --- | --- |
-| **[bastion](https://github.com/AR-base/bastion)** | Passive website security scanner for small businesses, with a plain-English AI risk briefing. Defense-in-depth SSRF guard, full security-header analysis, CI-tested. | Cloudflare Workers · Claude · vanilla JS |
-| **[phishlens](https://github.com/AR-base/phishlens)** | Interactive phishing-awareness training: realistic email simulator, AI tutor, and live URL inspector. Falls back to a curated KB when the model is unreachable. | Vercel Functions · Claude · vanilla JS |
-| **[esaip-ai-assistant](https://github.com/AR-base/esaip-ai-assistant)** | Bilingual chat assistant for ESAIP students and faculty. Streaming responses, image / PDF attachments, role-aware UI. | Vercel Edge · Claude · vanilla JS |
+| **[Atlas](https://github.com/AR-base/atlas)** · [live](https://atlas.anish-pinninti.workers.dev) | Enterprise knowledge agent: one question, and it queries the database, searches internal documents and reads the code, then answers with every query and source it used. Read-only SQL enforced twice. | Claude tool use · SQLite (WebAssembly) · Cloudflare Workers |
+| **[Verity](https://github.com/AR-base/verity)** · [live](https://verity.anish-pinninti.workers.dev) | Measurable RAG engine: BM25 + multilingual embeddings, rank fusion, cross-encoder reranking, a citation on every sentence, and a built-in evaluation (hit@k, MRR) of four retrieval methods. | Workers AI (bge-m3, bge-reranker) · Claude · Cloudflare Workers |
+| **[Bastion](https://github.com/AR-base/bastion)** · [live](https://bastion.anish-pinninti.workers.dev) | Passive website security scanner: grades headers, HTTPS, cookies and exposure from A to F, with plain-language fixes. Scores A (100/100) on itself. | Cloudflare Workers · Claude · vanilla JS |
+| **[ESAIP AI Assistant](https://github.com/AR-base/esaip-ai-assistant)** · [live](https://esaip-ai-assistant.vercel.app) | Bilingual French/English assistant for ESAIP students: arrival steps, visa renewal, housing, alumni. Streaming, file upload, server-side keys. | Vercel Edge · Claude · vanilla JS |
+| **[Trim](https://github.com/AR-base/TRIM)** *(team project)* | Least-privilege access control for enterprise AI agents: removes unused permissions and flags agents that behave unlike themselves. | FastAPI · PostgreSQL · React · scikit-learn · Docker · Azure |
+| **[PhishLens](https://github.com/AR-base/phishlens)** *(team project)* | Phishing-awareness training: email simulator, AI tutor and URL inspector. | Vercel Functions · Claude · vanilla JS |
 
-Each project ships with a `SECURITY.md`, an explicit threat model in the README, and tests where the surface justifies them.
-
----
-
-### What I care about when shipping
-
-- **Defense in depth.** One control fails; another catches it. Headers, then CSP, then size caps, then rate limits.
-- **Honest scope.** Demos that don't pretend to be products; products that don't pretend to be magic.
-- **Readable code.** Comments where the *why* is non-obvious, never where the *what* already is.
-- **Pure functions where possible.** Easier to test, easier to reason about under attack.
+Each project has a security section in its README, keeps secrets on the server, validates its inputs and runs its tests in CI.
 
 ---
 
-### Currently exploring
+### How I work
 
-Cloudflare Workers, Durable Objects, Vectorize, the Workers Rate Limiting API. Anthropic prompt caching and structured tool use. Threat modeling against LLM-mediated apps.
+- **Measure, don't assume.** Cost per request, test suites, retrieval metrics.
+- **Defense in depth.** Strict headers and CSP, size caps, rate limits, least privilege.
+- **Honest scope.** Each README states what the project does not do yet.
 
 ---
 
-### Reach me
+### Contact
 
-GitHub: [@AR-base](https://github.com/AR-base) · Email: psaianish2001@gmail.com
+psaianish2001@gmail.com · [LinkedIn](https://www.linkedin.com/in/pinninti-sai-anish-2b7125278/) · English (professional), French (intermediate)
